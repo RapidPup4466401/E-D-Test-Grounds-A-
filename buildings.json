@@ -12,9 +12,9 @@
 	///		"hurryCostModifier": 
 	///	},
 
-    \\\ Power Production [City-Level]
+    /// Power Production [City-Level]
     {
-			"name": "City Fusion Reactor",
+			"name": "Fusion Power Plant",
 			"maintenance": 8,
             "percentStatBonus": {"production": 10},
 			"uniques": [
@@ -25,7 +25,7 @@
 		    "hurryCostModifier": 50
 	},
     {
-			"name": "City Antimatter Reactor",
+			"name": "Antimatter Power Plant",
 			"maintenance": 25,
             "percentStatBonus": {"production": 10},
 			"uniques": [
@@ -38,7 +38,7 @@
     {
 			"name": "Wind Farm",
 			"maintenance": 3,
-            "percentStatBonus": {"production": 10},
+            "percentStatBonus": {"production": 5},
 			"uniques": [
                 "'Power Building'",
                 "Provides [6] [Power] <in this city>",
@@ -48,13 +48,14 @@
 			"hurryCostModifier": 25
 	},
     {
-			"name": "Current Turbine Farm",
+			"name": "Tidal Turbine Farm",
 			"maintenance": 4,
             "percentStatBonus": {"production": 5},
 			"uniques": [
                 "'Power Building'",
                 "Provides [4] [Power] <in this city>",
-			    "[+1 Production] from [{coast}{river}] tiles [in this city]",
+				"Must be next to [Coast]",
+			    "[+1 Production] from [Coast] tiles [in this city]",
             ],
 			"requiredTech": "Renewable Energy",
 			"hurryCostModifier": 25
@@ -79,6 +80,22 @@
 
 
     /// Infrastructure
+	/// Will require new resource 'plasma fuel' for the fusion power plant
+	{
+			"name": "Isotope Processing Plant",
+		    "maintenance": 12,
+			"uniques": [
+                "'Infrastructure'",
+                "Consumes [2] [Power] <in cities with a [Power Grid]>",
+			    "Only available <if [Power Grid] is constructed> <hidden from users>",
+				"Provides [1] [Plasma Fuel]",
+				"Provides [3] [Plasma Fuel] <in cities with a [Power Grid]> <in cities without a [Power Shortage]>",
+				"Uses water and helium-3 to produce the plasms fuel for fusion reactors and other processes."
+            ],
+			"requiredTech": "Internet",
+		    "requiredBuilding": "Particle Accelerator",
+			"hurryCostModifier": 
+	},
     {
 			"name": "Datacenter",
 		    "maintenance": 5,
@@ -105,6 +122,7 @@
                 "[-4]% maintenance cost for [all] buildings [in all cities]"
             ],
 			"requiredTech": "Quantum Computer",
+		    "requiredBuilding": "Datacenter",
 			"hurryCostModifier": 
 	},
     {
@@ -120,6 +138,7 @@
                 "[+6 Culture] per [2] population [in this city] <if [Quantum Datacenter] is constructed> <in this city>",
             ],
 			"requiredTech": "Generative AI",
+		    "requiredBuilding": "Datacenter",
 			"hurryCostModifier": 25
 	},
     {
@@ -127,32 +146,62 @@
 			"maintenance": 7,
 			"uniques": [
                 "'Infrastructure'",
-                "[+1 Culture] per [2] population [in this city]",
-                "[+2 Culture] per [2] population [in this city] <if [Quantum Datacenter] is constructed> <in this city>",
+                "[+1 Culture] per [2] population [in this city] <hidden from user>",
+                "[+2 Culture] per [2] population [in this city] <if [Quantum Datacenter] is constructed> <in this city> <hidden from user>",
+				"FOC stands for Fiber Optical Cable, Center. These cables use light to transmit data at speeds greater than radiowaves. "
             ],
 			"requiredTech": "Nanotechnology",
+		    "requiredBuilding": "WAN Support",
 			"quote": "A center for housing all your fiber optical needs! "
 			"hurryCostModifier": 25
 	},
     {
-			"name": "buildingName",
-			"cost":,
-			"isWonder": tf,
-			"culture":,
-			"uniques": ["filter",
-						"feature",
-						"condition"],
-			"requiredTech": "",
-			"quote": ""
-			"hurryCostModifier": 
+			"name": "Launch Platform",
+			"maintenance": 15,
+			"uniques": [
+				"'Infrastructure'",
+				"Consumes [1] [Alloy]",
+				"Consumes [1] [Aluminum]",
+				"Consumes [1] [Electronic Parts]",
+				"Consumes [1] [Power]"
+			],
+			"requiredTech": "Satellites",
+			"requiredBuilding": "Rocketry Industry",
+			"hurryCostModifier": 25
+	},
+	{
+			"name": "Spaceport",
+			"maintenance": 25,
+			"uniques": [
+				"'Infrastructure'",
+				"Consumes [1] [Alloy]",
+				"Consumes [1] [Aluminum]",
+				"Consumes [1] [Electronic Parts]",
+				"Consumes [3] [Power]"
+			],
+			"requiredTech": "Advanced Engines",
+			"requiredBuilding": "Launch Platform",
+			"hurryCostModifier": 25
+	},
+    {
+			"name": "Maglev Station",
+			"maintenance": 10,
+			"uniques": [
+				"Only available <in cities connected to the capital> <if [Vehicle Industry] is constructed>",
+				"'Infrastructure'",
+				"[+4]% [Gold] from Trade Routes",
+				"[+4]% growth [in all cities]",
+				"[-8]% maintenance cost for [all] buildings [in this city]"],
+			"requiredTech": "Superconductor",
+			"hurryCostModifier": 25
 	},
 
 /// Medical
     
     {
 			"name": "Organ Cloning Facility",
-			"maintenance":8,
-		    "happiness":3,
+			"maintenance": 8,
+		    "happiness": 3,
 		    "uniques": [
 			    "'Infrastructure'",
 			    "[-5]% Unhappiness from [Population] [in this city] <hidden from users>",
@@ -167,17 +216,136 @@
 			"hurryCostModifier": 25
 	},
     {
-			"name": "buildingName",
-			"cost":,
-			"isWonder": tf,
-			"culture":,
-			"uniques": ["filter",
-						"feature",
-						"condition"],
-			"requiredTech": "",
-			"quote": ""
-			"hurryCostModifier": 
+			"name": "Cryopod Facility",
+			"maintenance": 16,
+			"happiness": 4,
+			"uniques": [
+				"'Infrastructure'",
+				"[-5]% Unhappiness from [Population] [in this city] <hidden from users>",
+			    "[-10]% Unhappiness from [Population] [in this city] <in cities with a [Power Grid]> <in cities without a [Power Shortage]><hidden from users>",
+			   ],
+			"requiredTech": "Cryo Sleep",
+			"hurryCostModifier": 25, 
 	},
+
+/// Innovation
+	
+    {
+		"name": "Innovation of Virtual Assistants",
+		"cost": 500,
+		"uniques": [
+			"'Innovation'",
+			"Limited to [1] per Civilization <hidden from users>",
+			"Gain [200] [Science] <(modified by game speed)> <if [Innovation of Virtual Assistants] is not constructed by anybody> <hidden from users>",
+			"Gain [500] [Gold] <(modified by game speed)> <if [Innovation of Virtual Assistants] is not constructed by anybody> <hidden from users>",
+			"[-50]% production cost <if [Innovation of Virtual Assistants] is constructed by anybody> <hidden from users>",
+			"Unsellable",
+			"Moves to new capital when capital changes <hidden from users>"
+		],
+		"requiredBuilding":"AI Datacenter",
+		"requiredTech": "Generative AI",
+		"hurryCostModifier": 0
+	},
+	{
+		"name": "Innovation of Reusable Rockets",
+		"cost": 500,
+		"uniques": [
+			"'Innovation'",
+			"Limited to [1] per Civilization <hidden from users>",
+			"Gain [200] [Science] <(modified by game speed)> <if [Innovation of Reusable Rockets] is not constructed by anybody> <hidden from users>",
+			"Gain [500] [Gold] <(modified by game speed)> <if [Innovation of Reusable Rockets] is not constructed by anybody> <hidden from users>",
+			"[-50]% production cost <if [Innovation of Reusable Rockets] is constructed by anybody> <hidden from users>",
+			"Unsellable",
+			"Moves to new capital when capital changes <hidden from users>"
+		],
+		"requiredBuilding":"Spaceport",
+		"requiredTech": "Advanced Engines",
+		"hurryCostModifier": 0
+	},
+	{
+		"name": "Innovation of Cloud Computing",
+		"cost": 500,
+		"uniques": [
+			"'Innovation'",
+			"Limited to [1] per Civilization <hidden from users>",
+			"Gain [200] [Science] <(modified by game speed)> <if [Innovation of Cloud Computing] is not constructed by anybody> <hidden from users>",
+			"Gain [500] [Gold] <(modified by game speed)> <if [Innovation of Cloud Computing] is not constructed by anybody> <hidden from users>",
+			"[-50]% production cost <if [Innovation of Cloud Computing] is constructed by anybody> <hidden from users>",
+			"[+10]% [production] <if [Innovation of Cloud Computing] is constructed by anybody> <hidden from users>",
+			"Unsellable",
+			"Moves to new capital when capital changes <hidden from users>"
+		],
+		"requiredBuilding":"Spaceport",
+		"requiredTech": "Advanced Engines",
+		"hurryCostModifier": 0
+	},
+
+/// Military
+	
+    {
+			"name": "Virtual Training Environment",
+			"maintenance": 8,
+			"uniques": [
+				"'Military Building'",
+				"New [{'Standing Army'} {Land}] units start with [15] XP [in this city]",
+				"New [{'Noble Army'} {Land}] units start with [15] XP [in this city]",
+				"Consumes [1] [Power] <in cities with a [Power Grid]>",
+				"Only available <if [Power Grid] is constructed> <in this city> <hidden from user>",
+				"Only available <if [Military Base] is constructed> <in this city> <hidden from user>",
+				"Destroyed when the city is captured <hidden from users>"
+			],
+			"requiredTech": "Haptics",
+			"hurryCostModifier": 25
+	},
+    {
+			"name": "Orbital Laser Platform",
+			"maintenance": 15,
+			"isNationalWonder": true,
+			"uniques": [
+				"'Military Building'",
+				"Only available <if [Spaceport] is constructed> <in this city> <hidden from user>",
+				"Only available <if [Orbital Defense Platform] is constructed> <in this city> <hidden from user>",
+				"Destroyed when the city is captured <hidden from users>",
+				"[1] free [Orbital Laser Strike] units appear <every [2] turns> <when at war>",
+			],
+			"requiredTech": "Space Elevator",
+			"hurryCostModifier": 25
+	},
+
+/// National Wonder
+	
+    {
+			"name": "Space Elevator",
+			"maintenance": 50,
+			"isNationalWonder": true,
+			"uniques": [
+			    "'Infrastructure'",
+				"Consumes [1] [Microchips]",
+				"Consumes [5] [Alloy]",
+				"Consumes [2] [Graphene]",
+				"Consumes [3] [Power]",
+				"Requires buffs and effects it will give to global world, nation, city, or wherever it will pertain to"
+			],
+			"requiredTech": "Space Elevator",
+			"hurryCostModifier": 100
+	},
+    {
+			"name": "Orbital Defense Platform",
+			"maintenance": 15,
+			"isNationalWonder": true,
+			"uniques": [
+				"'Military Building'",
+				"Only available <if [Spaceport] is constructed> <in this city> <hidden from user>",
+				"Only available <if [Military Base] is constructed> <in this city> <hidden from user>",
+				"Destroyed when the city is captured <hidden from users>",
+				"Comment [Enables you to build Orbital Units]"
+			],
+			"requiredTech": "Superconductor",
+			"hurryCostModifier": 25
+	},
+
+
+	
     {
 			"name": "buildingName",
 			"cost":,
