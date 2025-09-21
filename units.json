@@ -142,4 +142,74 @@
 		],
 		"attackSound": "jetgun"
 	},
+	{
+		"name": "Ground Attack Drone",
+		"unitType": "Bomber",
+		"movement": 3,
+		"strength": 70,
+		"rangedStrength": 90,
+		"range": 8,
+		"cost": 450,
+		"requiredTech": "Synchronization",
+		"requiredResource": "Aluminum",
+		"uniques": [
+			"Consumes [1] [Fuel]",
+			"Costs [50] [Aircraft Parts]",
+			"'Firearms'",
+			"'Dense Formation'",
+			"'Jet Engine Aircraft'",
+			"'Aerial Drone'",
+			"[+200]% Strength <vs [Land] units>",
+			"[+25]% Strength <vs [Helicopter] units>",
+			"Never appears as a Barbarian unit <hidden from users>"
+		],
+		"attackSound": "machinegun"
+	},
+	{
+		"name": "Ground Bomber Drone",
+		"unitType": "Bomber",
+		"movement": 2,
+		"strength": 75,
+		"rangedStrength": 95,
+		"range": 9,
+		"cost": 650,
+		"requiredTech": "Synchronization",
+		"upgradesTo": "Stealth Bomber",
+		"requiredResource": "Aluminum",
+		"uniques": [
+			"Consumes [1] [Fuel]",
+			"Costs [75] [Aircraft Parts]",
+			"'Firearms'",
+			"'Dense Formation'",
+			"'Jet Engine Aircraft'",
+			"'Aerial Drone'",
+			"Blast radius [1]",
+			"Never appears as a Barbarian unit"
+		],
+		"attackSound": "bombing"
+	},
+	{
+		"name": "Jet Figther Drone",
+		"unitType": "Fighter",
+		"movement": 4,
+		"strength": 75,
+		"rangedStrength": 95,
+		"range": 10,
+		"cost": 850,
+		"requiredTech": "Synchronization",
+		"requiredResource": "Aluminum",
+		"uniques": [
+			"Consumes [1] [Fuel]",
+			"Costs [80] [Aircraft Parts]",
+			"'Firearms'",
+			"'Dense Formation'",
+			"'Jet Engine Aircraft'",
+			"'Aerial Drone'",
+			"[+150]% Strength <vs [Bomber] units>",
+			"[+75]% Strength <vs [Fighter] units>",
+			"[+25]% Strength <vs [Helicopter] units>",
+			"Never appears as a Barbarian unit <hidden from users>"
+		],
+		"attackSound": "machinegun"
+	},
 ]
