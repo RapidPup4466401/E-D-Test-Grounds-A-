@@ -1,0 +1,19 @@
+[
+    //Military
+    {
+        "name": "Laser",
+        "movementType": "Air"
+        "uniques": [
+            "Self-destructs when attacking",
+        ]
+        
+    },
+    {
+        "name": "Orbital",
+        "movementType": "Air"
+        "uniques": [
+            "Spacecraft",
+            "[+6] Sight"
+        ]
+    },
+]
