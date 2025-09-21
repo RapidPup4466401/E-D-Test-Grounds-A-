@@ -14,14 +14,16 @@
 
   ///Military
 	{
-		"name": "Worker",
-		"cost": 70,
-		"unitType": "Civilian",
+		"name": "Orbital Laser Strike",
+		"unitType": "Laser",
 		"movement": 2,
 		"uniques": [
+			"Unbuildable <hidden from users>",
+			"Destroys tile improvements when attacking <hidden from users>",
+			"Cannot be intercepted",
+			"No sight <hidden from users>"
 		],
-		"upgradesTo": "Mechanised Worker",
-		"requiredTech": "Fire Making",
+		"requiredTech": "Space Elevator",
 		"hurryCostModifier": 25
 	},
 ]
