@@ -16,7 +16,9 @@
 	{
 		"name": "Orbital Laser Strike",
 		"unitType": "Laser",
-		"movement": 2,
+		"movement": 100,
+		"strength": 500,
+		"rangedStrength": 500,
 		"uniques": [
 			"Unbuildable <hidden from users>",
 			"Destroys tile improvements when attacking <hidden from users>",
@@ -24,6 +26,120 @@
 			"No sight <hidden from users>"
 		],
 		"requiredTech": "Space Elevator",
+	},
+	{
+		"name": "Orbital Drop Strike",
+		"cost": 5000,
+		"unitType": "Orbital",
+		"strength": 5000,
+		"rangedStrength": 5000,
+		"movement": 2,
+		"uniques": [
+			"Only available <in cities with a [Orbital Defense Platform] <hidden from users>",
+			"Destroys tile improvements when attacking <hidden from users>",
+			"Cannot be intercepted",
+			"No sight <hidden from users>"
+		],
+		"requiredTech": "Space Elevator",
 		"hurryCostModifier": 25
+	},
+	{
+		"name": "Orbital Railgun Strike",
+		"cost": 1000,
+		"unitType": "Orbital",
+		"strength": 2000,
+		"rangedStrength": 2000,
+		"movement": 2,
+		"uniques": [
+			"Only available <in cities with a [Orbital Defense Platform] <hidden from users>",
+			"Destroys tile improvements when attacking <hidden from users>",
+			"Cannot be intercepted",
+			"No sight <hidden from users>"
+		],
+		"requiredTech": "Railguns",
+		"hurryCostModifier": 25
+	},
+	{
+		"name": "Orbital Jet Fighter",
+		"unitType": "Orbital",
+		"movement": 4,
+		"strength": 105,
+		"rangedStrength": 105,
+		"range": 25,
+		"interceptRange": 15,
+		"cost": 900,
+		"requiredTech": "Railguns",
+		"requiredResource": "Standing Army Maintainance",
+		"uniques": [
+			"Only available <if [Spaceport] is constructed> <in this city> <hidden from users>",
+			"Consumes [2] [Fuel]",
+			"Costs [150] [Aircraft Parts]",
+			"'Firearms'",
+			"'Dense Formation'",
+			"'Jet Engine Aircraft'",
+			"'Standing Army'",
+			"Can perform Air Sweep",
+			"[65]% chance to intercept air attacks",
+			"[+200]% Strength <vs [Bomber] units>",
+			"[+50]% Strength <vs [Helicopter] units>",
+			"Never appears as a Barbarian unit <hidden from users>"
+		],
+		"promotions": [
+			"The Standing Army"
+		],
+		"attackSound": "machinegun"
+	},
+	{
+		"name": "Orbital Jet Bomber",
+		"unitType": "Bomber",
+		"movement": 4,
+		"strength": 115,
+		"rangedStrength": 115,
+		"range": 25,
+		"cost": 1300,
+		"requiredTech": "Space Elevator",
+		"requiredResource": "Standing Army Maintainance",
+		"uniques": [
+			"Only available <if [Spaceport] is constructed> <in this city> <hidden from users>",
+			"[+100]% maintenance costs <hidden from users>",
+			"Consumes [2] [Fuel]",
+			"Costs [250] [Aircraft Parts]",
+			"'Firearms'",
+			"'Dense Formation'",
+			"'Jet Engine Aircraft'",
+			"Blast radius [2]",
+			"Never appears as a Barbarian unit <hidden from users>"
+		],
+		"promotions": [
+			"The Standing Army"
+		],
+		"attackSound": "bombing"
+	},
+	{
+		"name": "Orbital Droneship",
+		"unitType": "Orbital",
+		"cost": 2500,
+		"movement": 4,
+		"strength": 100,
+		"requiredTech": "Synchronization",
+		"uniques": [
+			"Only available <if [Invention of Helicopter] is constructed> <hidden from users>",
+			"Only available <if [Spaceport] is constructed> <in this city> <hidden from users>",
+			"Only available <if [Orbital Defense Platform] is constructed> <hidden from users>",
+			"Consumes [4] [Standing Army Maintainance",
+			"Costs [50] [Microchips]",
+			"'Standing Army'",
+       		"'Nuclear Powered Ship'",
+			"'Firearms'",
+			"Can see over obstacles <hidden from users>",
+			"Invisible to non-adjacent units <hidden from users>",
+			"Can see invisible [All] unit <hidden from users>",
+			"[+2] Sight <hidden from user>",
+			"Can carry [10] [Drone] units"
+		],
+		"promotions": [
+			"The Standing Army",
+		],
+		"attackSound": "jetgun"
 	},
 ]
