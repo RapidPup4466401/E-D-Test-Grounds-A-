@@ -189,7 +189,7 @@
 		"attackSound": "bombing"
 	},
 	{
-		"name": "Jet Figther Drone",
+		"name": "Interceptor Drone",
 		"unitType": "Fighter",
 		"movement": 4,
 		"strength": 75,
