@@ -1,0 +1,218 @@
+[
+	///{
+	///		"name": "buildingName",
+	///		"cost":,
+	///		"isWonder": tf,
+	///		"culture":,
+	///		"uniques": ["filter",
+	///					"feature",
+	///					"condition"],
+	///		"requiredTech": "",
+	///		"quote": ""
+	///		"hurryCostModifier": 
+	///	},
+
+    \\\ Power Production [City-Level]
+    {
+			"name": "City Fusion Reactor",
+			"maintenance": 8,
+            "percentStatBonus": {"production": 10},
+			"uniques": [
+                "'Power Building'",
+                "Provides [16] [Power] <in this city>"
+            ],
+			"requiredTech": "Nuclear Fusion",
+		    "hurryCostModifier": 50
+	},
+    {
+			"name": "City Antimatter Reactor",
+			"maintenance": 25,
+            "percentStatBonus": {"production": 10},
+			"uniques": [
+                "'Power Building'",
+                "Provides [32] [Power] <in this city>"
+            ],
+			"requiredTech": "Antimatter",
+			"hurryCostModifier": 100
+	},
+    {
+			"name": "Wind Farm",
+			"maintenance": 3,
+            "percentStatBonus": {"production": 10},
+			"uniques": [
+                "'Power Building'",
+                "Provides [6] [Power] <in this city>",
+			    "[+1 Production] from [open] tiles [in this city]",
+            ]
+			"requiredTech": "Ecology",
+			"hurryCostModifier": 25
+	},
+    {
+			"name": "Current Turbine Farm",
+			"maintenance": 4,
+            "percentStatBonus": {"production": 5},
+			"uniques": [
+                "'Power Building'",
+                "Provides [4] [Power] <in this city>",
+			    "[+1 Production] from [{coast}{river}] tiles [in this city]",
+            ],
+			"requiredTech": "Renewable Energy",
+			"hurryCostModifier": 25
+	},
+    {
+			"name": "Dyson Array Collection Point",
+			"maintenance": 10,
+			"uniques": [
+                "'Power Building'",
+			    "Only available <if [Power Grid] is constructed>",
+                "Provides [15] [Power] <in this city>"
+                /// If a dyson swarm is built, it should be owned by one nation, and so
+                /// It's essentially limitless energy so this 15 power here is not relevant,
+                /// should be more like infinite. What we can do however is split it into tiers.
+                /// For every tier of Dyson Swarm built, you unlock more power you receive
+                /// from this building.
+            ],
+			"requiredTech": "Dyson Array",
+			"quote": "A collection point to harvest collected solar output from the star via a Dyson Swarm to the city. "
+			"hurryCostModifier": 50
+	},
+
+
+    /// Infrastructure
+    {
+			"name": "Datacenter",
+		    "maintenance": 5,
+		    "happiness": 1,
+			"uniques": [
+                "'Infrastructure'",
+                "Consumes [1] [Power] <in this city>",
+			    "Only available <if [Power Grid] is constructed> <hidden from users>",
+                "[+1 Culture] per [2] population [in this city]",
+                "[-2]% maintenance cost for [all] buildings [in all cities]"
+            ],
+			"requiredTech": "Internet",
+			"hurryCostModifier": 
+	},
+    {
+			"name": "Quantum Datacenter",
+		    "maintenance": 10,
+		    "happiness": 2,
+			"uniques": [
+                "'Infrastructure'",
+                "Consumes [2] [Power] <in this city>",
+			    "Only available <if [Power Grid] is constructed> <hidden from users>",
+                "[+2 Culture] per [2] population [in this city]",
+                "[-4]% maintenance cost for [all] buildings [in all cities]"
+            ],
+			"requiredTech": "Quantum Computer",
+			"hurryCostModifier": 
+	},
+    {
+			"name": "AI Datacenter",
+			"maintenance": 8,
+		    "happiness": 2,
+			"uniques": [
+                "'Infrastructure'",
+                "Consumes [2] [Power] <in this city>",
+			    "Only available <if [Power Grid] is constructed> <hidden from users>",
+                "[+4 Culture] per [2] population [in this city]",
+                "[-8]% maintenance cost for [all] buildings [in all cities]",
+                "[+6 Culture] per [2] population [in this city] <if [Quantum Datacenter] is constructed> <in this city>",
+            ],
+			"requiredTech": "Generative AI",
+			"hurryCostModifier": 25
+	},
+    {
+			"name": "FOC Center",
+			"maintenance": 7,
+			"uniques": [
+                "'Infrastructure'",
+                "[+1 Culture] per [2] population [in this city]",
+                "[+2 Culture] per [2] population [in this city] <if [Quantum Datacenter] is constructed> <in this city>",
+            ],
+			"requiredTech": "Nanotechnology",
+			"quote": "A center for housing all your fiber optical needs! "
+			"hurryCostModifier": 25
+	},
+    {
+			"name": "buildingName",
+			"cost":,
+			"isWonder": tf,
+			"culture":,
+			"uniques": ["filter",
+						"feature",
+						"condition"],
+			"requiredTech": "",
+			"quote": ""
+			"hurryCostModifier": 
+	},
+
+/// Medical
+    
+    {
+			"name": "Organ Cloning Facility",
+			"maintenance":8,
+		    "happiness":3,
+		    "uniques": [
+			    "'Infrastructure'",
+			    "[-5]% Unhappiness from [Population] [in this city] <hidden from users>",
+			    "[-5]% Unhappiness from [Population] [in this city] <in cities with a [Power Grid]> <in cities without a [Power Shortage]><hidden from users>",
+			    "[+20]% growth [in this city] <hidden from users>",
+			    "[+8]% growth [in this city] <in cities with a [Power Grid]> <in cities without a [Power Shortage]><hidden from users>",
+			    "[All] Units adjacent to this city heal [5] HP per turn when healing <hidden from users>",
+		        "Will increase happiness in city population, heal units faster, and can be buffed via power grid."
+            ],
+		    "requiredBuilding": "Hospital",
+			"requiredTech": "Clone Organs",
+			"hurryCostModifier": 25
+	},
+    {
+			"name": "buildingName",
+			"cost":,
+			"isWonder": tf,
+			"culture":,
+			"uniques": ["filter",
+						"feature",
+						"condition"],
+			"requiredTech": "",
+			"quote": ""
+			"hurryCostModifier": 
+	},
+    {
+			"name": "buildingName",
+			"cost":,
+			"isWonder": tf,
+			"culture":,
+			"uniques": ["filter",
+						"feature",
+						"condition"],
+			"requiredTech": "",
+			"quote": ""
+			"hurryCostModifier": 
+	},
+    {
+			"name": "buildingName",
+			"cost":,
+			"isWonder": tf,
+			"culture":,
+			"uniques": ["filter",
+						"feature",
+						"condition"],
+			"requiredTech": "",
+			"quote": ""
+			"hurryCostModifier": 
+	},
+    {
+			"name": "buildingName",
+			"cost":,
+			"isWonder": tf,
+			"culture":,
+			"uniques": ["filter",
+						"feature",
+						"condition"],
+			"requiredTech": "",
+			"quote": ""
+			"hurryCostModifier": 
+	},
+]
+  
