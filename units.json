@@ -1,0 +1,27 @@
+[
+	{
+		"name": "",
+		"cost": ,
+		"unitType": "",
+		"movement": ,
+		"uniques": [
+      
+    ],
+		"upgradesTo": "",
+		"requiredTech": "",
+		"hurryCostModifier":
+	},
+
+  ///Military
+	{
+		"name": "Worker",
+		"cost": 70,
+		"unitType": "Civilian",
+		"movement": 2,
+		"uniques": [
+		],
+		"upgradesTo": "Mechanised Worker",
+		"requiredTech": "Fire Making",
+		"hurryCostModifier": 25
+	},
+]
