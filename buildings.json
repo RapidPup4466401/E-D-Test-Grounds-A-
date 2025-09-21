@@ -187,8 +187,10 @@
 			"name": "Maglev Station",
 			"maintenance": 10,
 			"uniques": [
-				"Only available <in cities connected to the capital> <if [Vehicle Industry] is constructed>",
 				"'Infrastructure'",
+				"Only available <in cities connected to the capital> <if [Vehicle Industry] is constructed>",
+				"Only available <in cities connected to the capital> <if [Power Grid] is constructed> <in this city> <hidden from users>",
+				"Consumes [1] [Power]",
 				"[+4]% [Gold] from Trade Routes",
 				"[+4]% growth [in all cities]",
 				"[-8]% maintenance cost for [all] buildings [in this city]"],
