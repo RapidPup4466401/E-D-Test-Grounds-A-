@@ -150,7 +150,7 @@
 		"rangedStrength": 90,
 		"range": 8,
 		"cost": 450,
-		"requiredTech": "Synchronization",
+		"requiredTech": "Remote Control",
 		"requiredResource": "Aluminum",
 		"uniques": [
 			"Consumes [1] [Fuel]",
@@ -162,6 +162,31 @@
 			"[+200]% Strength <vs [Land] units>",
 			"[+25]% Strength <vs [Helicopter] units>",
 			"Never appears as a Barbarian unit <hidden from users>"
+		],
+		"attackSound": "machinegun"
+	},
+	{
+		"name": "Armoured Tank Drone",
+		"unitType": "Assault",
+		"movement": 3,
+		"strength": 70,
+		"rangedStrength": 90,
+		"range": 8,
+		"cost": 450,
+		"requiredTech": "Remote Control",
+		"requiredResource": "Aluminum",
+		"uniques": [
+			"Consumes [1] [Fuel]",
+			"Costs [50] [Vehicle Parts]",
+			"Costs [10] [Microchips]",
+			"'Firearms'",
+			"'Dense Formation'",
+			"'Jet Engine Aircraft'",
+			"'Standing Army'",
+			"'Mechanised'",
+			"'Drone'",
+			"Can move after attacking <hidden from users>",
+			"[+25]% Strength <after discovering [Synchronization]> <in [Land] tiles>",
 		],
 		"attackSound": "machinegun"
 	},
