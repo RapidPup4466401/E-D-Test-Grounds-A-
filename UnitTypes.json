@@ -15,26 +15,5 @@
             "Spacecraft",
             "[+6] Sight"
         ]
-    },
-    {
-        "name": "Ground Drone",
-        "movementType": "Land"
-        "uniques": [
-            "Drone",
-        ]
-    },
-    {
-        "name": "Aerial Drone",
-        "movementType": "Air"
-        "uniques": [
-            "Drone",
-        ]
-    },
-    {
-        "name": "Naval Drone",
-        "movementType": "Water"
-        "uniques": [
-            "Drone",
-        ]
-    },
+    }
 ]
